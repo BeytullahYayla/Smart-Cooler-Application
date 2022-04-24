@@ -1,5 +1,9 @@
 package CentralProcessingUnit.AgArayuzu.Concrete;
 
+import java.io.Console;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
 import CentralProcessingUnit.Eyleyici.Abstract.Eyleyici;
 import CentralProcessingUnit.SicaklikAlgilayici.Abstract.SicaklikAlgilayici;
 
@@ -13,6 +17,8 @@ public class AgArayuzu implements CentralProcessingUnit.AgArayuzu.Abstract.AgAra
     }
     @Override
     public void getMenu() {
+    	System.out.println("1)Sicaklik Goruntule\n2)Sogutucu Calistir\n3)Sogutucu Kapat\n4)Cikis");
+    	
 
 
     }

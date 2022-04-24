@@ -26,9 +26,9 @@ public class Database implements DatabaseRepository {
 	}
 	
 	@Override
-	public User validateUser(String username, String password) {
+	public boolean validateUser(String username, String password) {
 		   User user=null;
-
+		    
 	        System.out.println("User is validating...");
 	        
 	       
@@ -64,8 +64,16 @@ public class Database implements DatabaseRepository {
 	        } catch (Exception e) {
 	            e.printStackTrace();
 	        }
-	       System.out.println("User validated successfully");
-	       System.out.println(user.getUserName());
+	      
+	       if(user!=null) {
+	    	   System.out.println("User validated successfully");
+	    	   return true;
+	       }
+	       else {
+	    	   System.out.println("User not validated successfully");
+	    	   return false;
+	       }
+	    	   
 
 	       
 		
