@@ -5,6 +5,7 @@ import Entity.Abstract.Entity;
 
 
 public class User implements Entity {
+	
     String userName;
     String password;
     public User(String userName,String password){
@@ -22,7 +23,7 @@ public class User implements Entity {
     public void setUserName(String userName) {
         this.userName = userName;
     }
-
+    
     public String getPassword() {
         return password;
     }
