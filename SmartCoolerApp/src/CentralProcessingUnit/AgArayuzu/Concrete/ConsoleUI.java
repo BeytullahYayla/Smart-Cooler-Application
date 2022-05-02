@@ -20,11 +20,39 @@ public class ConsoleUI {
        System.out.print("Password:");
        Scanner input2=new Scanner(System.in);
        String password=input2.nextLine();
-       
+     
+      
+       Scanner input3=new Scanner(System.in);
+      
+       int devamMi=1;
        Database database=new Database();
        if(database.validateUser(userName, password)) {
+    	   do {
     	   agArayuzu.getMenu();
+    	   Scanner input4=new Scanner(System.in);
+    	   int cevap=input4.nextInt();
+    	   if (cevap==1) {
+			agArayuzu.sicaklikGonder();
+		}
+    	   else if(cevap==2) {
+    		   agArayuzu.sogutucuAc();
+    	   }
+    	   else if(cevap==3) {
+    		   agArayuzu.sogutucuKapat();
+    	   }
+    	   else if(cevap==4){
+    		   System.out.println("Cikis Yapildi");
+    		   return;
+    	   }
+    	   System.out.println("Baska islem yapmak istiyor musunuz?(Evet:1     Hayir:0)");
+    	   Scanner input5=new Scanner(System.in);
+    	   devamMi=input5.nextInt();
+    	   }while(devamMi!=0);
        }
+       
+       
+     
+   
     
        
     }

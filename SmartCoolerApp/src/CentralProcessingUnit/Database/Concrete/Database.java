@@ -16,7 +16,7 @@ public class Database implements DatabaseRepository {
             conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/CoolerDb",
                     "postgres","Beytullah.123");
 
-            System.out.println("Connected Database Successfully!");
+            
 
         } catch (Exception e) {
             System.out.println("Something went wrong, wrong username or password!");
