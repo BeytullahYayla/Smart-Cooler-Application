@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import CentralProcessingUnit.Eyleyici.Abstract.Eyleyici;
 import CentralProcessingUnit.SicaklikAlgilayici.Abstract.SicaklikAlgilayici;
+import Observer.Concrete.Subscriber1;
 
 public class AgArayuzu implements CentralProcessingUnit.AgArayuzu.Abstract.AgArayuzu {
 
@@ -37,6 +38,8 @@ public class AgArayuzu implements CentralProcessingUnit.AgArayuzu.Abstract.AgAra
     @Override
     public void sicaklikGonder() {
         double sicaklik=this.sicaklikAlgilayici.sicaklikAlgila();
+        
+        
         System.out.println("Guncel Sicaklik:"+sicaklik);
     }
 }

@@ -8,11 +8,14 @@ import java.util.Scanner;
 import CentralProcessingUnit.Database.Concrete.Database;
 import CentralProcessingUnit.Eyleyici.Concrete.Eyleyici;
 import CentralProcessingUnit.SicaklikAlgilayici.Concrete.SicaklikAlgilayici;
+import Observer.Concrete.Publisher;
+import Observer.Concrete.Subscriber1;
 
 public class ConsoleUI {
 
     public static void main(String[] args) {
-        AgArayuzu agArayuzu=new AgArayuzu(new Eyleyici(),new SicaklikAlgilayici());
+    	
+        AgArayuzu agArayuzu=new AgArayuzu(new Eyleyici(),new SicaklikAlgilayici(new Publisher()));
         Scanner input=new Scanner(System.in);
         System.out.print("Username:");
        String userName=input.nextLine();
