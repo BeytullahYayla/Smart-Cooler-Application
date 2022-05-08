@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-public class Database implements DatabaseRepository {
+public class PostgreSQLDatabase implements DatabaseRepository {
 
 	private Connection connect() {
 

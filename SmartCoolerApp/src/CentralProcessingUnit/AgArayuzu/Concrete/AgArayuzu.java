@@ -3,7 +3,6 @@ package CentralProcessingUnit.AgArayuzu.Concrete;
 import java.io.Console;
 import java.io.InputStreamReader;
 import java.util.Scanner;
-
 import CentralProcessingUnit.Eyleyici.Abstract.Eyleyici;
 import CentralProcessingUnit.SicaklikAlgilayici.Abstract.SicaklikAlgilayici;
 import Observer.Concrete.Subscriber1;

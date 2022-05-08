@@ -5,17 +5,25 @@ import java.io.Console;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-import CentralProcessingUnit.Database.Concrete.Database;
+import CentralProcessingUnit.Database.Abstract.DatabaseRepository;
+import CentralProcessingUnit.Database.Concrete.PostgreSQLDatabase;
 import CentralProcessingUnit.Eyleyici.Concrete.Eyleyici;
+
 import CentralProcessingUnit.SicaklikAlgilayici.Concrete.SicaklikAlgilayici;
+import Factory.DatabaseFactory;
+import Factory.IDatabaseFactory;
+
 import Observer.Concrete.Publisher;
 import Observer.Concrete.Subscriber1;
 
 public class ConsoleUI {
 
     public static void main(String[] args) {
+   
     	
         AgArayuzu agArayuzu=new AgArayuzu(new Eyleyici(),new SicaklikAlgilayici(new Publisher()));
+        IDatabaseFactory databaseFactory=new DatabaseFactory();
+        
         Scanner input=new Scanner(System.in);
         System.out.print("Username:");
        String userName=input.nextLine();
@@ -26,9 +34,8 @@ public class ConsoleUI {
      
       
        Scanner input3=new Scanner(System.in);
-      
-       int devamMi=1;
-       Database database=new Database();
+       DatabaseRepository database=databaseFactory.getDatabaseByDriverType("Postgres");
+      int devamMi;
        if(database.validateUser(userName, password)) {
     	   do {
     	   agArayuzu.getMenu();
