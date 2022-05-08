@@ -2,7 +2,7 @@ package CentralProcessingUnit.Eyleyici.Abstract;
 
 
 
-public interface Eyleyici {
+public interface IEyleyici {
     public void sogutucuAc();
     public void sogutucuKapat();
 }

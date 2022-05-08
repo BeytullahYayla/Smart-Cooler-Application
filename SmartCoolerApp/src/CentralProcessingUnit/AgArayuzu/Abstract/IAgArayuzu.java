@@ -2,7 +2,7 @@ package CentralProcessingUnit.AgArayuzu.Abstract;
 
 
 
-public interface AgArayuzu{
+public interface IAgArayuzu{
     public void getMenu();
     public void sogutucuAc();
     public void sogutucuKapat();

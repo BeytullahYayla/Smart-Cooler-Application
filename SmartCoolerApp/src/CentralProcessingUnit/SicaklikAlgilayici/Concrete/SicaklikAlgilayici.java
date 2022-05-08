@@ -1,13 +1,13 @@
 package CentralProcessingUnit.SicaklikAlgilayici.Concrete;
 import java.util.Random;
 
-
+import CentralProcessingUnit.SicaklikAlgilayici.Abstract.ISicaklikAlgilayici;
 import Observer.Abstract.Subject;
 import Observer.Concrete.Subscriber1;
 import Observer.Concrete.Subscriber2;
 
 
-public class SicaklikAlgilayici implements CentralProcessingUnit.SicaklikAlgilayici.Abstract.SicaklikAlgilayici {
+public class SicaklikAlgilayici implements ISicaklikAlgilayici {
     Subject publisher;
 	public SicaklikAlgilayici(Subject publisher) {
     	this.publisher=publisher;

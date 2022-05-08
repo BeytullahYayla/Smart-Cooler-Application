@@ -3,15 +3,15 @@ package CentralProcessingUnit.AgArayuzu.Concrete;
 import java.io.Console;
 import java.io.InputStreamReader;
 import java.util.Scanner;
-import CentralProcessingUnit.Eyleyici.Abstract.Eyleyici;
-import CentralProcessingUnit.SicaklikAlgilayici.Abstract.SicaklikAlgilayici;
+import CentralProcessingUnit.Eyleyici.Abstract.IEyleyici;
+import CentralProcessingUnit.SicaklikAlgilayici.Abstract.ISicaklikAlgilayici;
 import Observer.Concrete.Subscriber1;
 
-public class AgArayuzu implements CentralProcessingUnit.AgArayuzu.Abstract.AgArayuzu {
+public class AgArayuzu implements CentralProcessingUnit.AgArayuzu.Abstract.IAgArayuzu {
 
-    private Eyleyici eyleyici;
-    private SicaklikAlgilayici sicaklikAlgilayici;
-    public AgArayuzu(Eyleyici eyleyici,SicaklikAlgilayici sicaklikAlgilayici){
+    private IEyleyici eyleyici;
+    private ISicaklikAlgilayici sicaklikAlgilayici;
+    public AgArayuzu(IEyleyici eyleyici,ISicaklikAlgilayici sicaklikAlgilayici){
         this.eyleyici=eyleyici;
         this.sicaklikAlgilayici=sicaklikAlgilayici;
     }
